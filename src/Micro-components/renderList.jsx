@@ -6,10 +6,14 @@ export default function RenderLists({ todoItem }) {
 
   return (
     <>
-      <div className="container text-center mb-12 ">
+      <div aria-label="todolist" className="container text-center mb-12 ">
         <div className="row align-items-start">
-          <div className="col">{todoItem.title}</div>
-          <div className="col">{todoItem.date}</div>
+          <div className="col" aria-label="titleOutput">
+            {todoItem.title}
+          </div>
+          <div className="col" aria-label="DateOutput">
+            {todoItem.date}
+          </div>
           <div className="col">
             <Button
               onClick={() => {

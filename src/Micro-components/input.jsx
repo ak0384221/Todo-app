@@ -25,18 +25,21 @@ export default function Input() {
           <div className="col">
             {/* //todolist// */}
             <input
+              aria-label="title"
               className="w-[10rem] border  px-2 h-[3rem] focus:outline-0  rounded-sm placeholder:text-sm"
-              type="text"
               placeholder="Enter your todo here"
               ref={todoEl}
+              required
             />
           </div>
           {/* //todoDate// */}
           <div className="col">
             <input
-              className="w-[9rem] focus:outline-0 h-[3rem] border  px-2"
+              aria-label="date"
+              className="w-[9rem] focus:outline-0 h-[3rem] border  text-white px-2"
               type="date"
               ref={todoDateEl}
+              required
             />
           </div>
           <div className="col">
