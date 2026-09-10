@@ -28,6 +28,12 @@ jobs:
       - name: build
         run: npm run build
 
+      - name: upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files
+          path: dist/
+
   # Job 2: dockerize and push - only runs if build-app succeeds
   docker-build-push:
     needs: build-app
