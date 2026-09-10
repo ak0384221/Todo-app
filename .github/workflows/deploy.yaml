@@ -34,6 +34,11 @@ jobs:
           name: dist-files
           path: dist/
 
+      - name: get build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-files
+
   # Job 2: dockerize and push - only runs if build-app succeeds
   docker-build-push:
     needs: build-app
