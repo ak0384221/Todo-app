@@ -18,6 +18,12 @@ jobs:
         with:
           node-version: "20"
 
+      - name: cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: deps-node-modules-${{ hashFiles('**/package-lock.json')}}
+
       - name: install dep
         run: npm install
 
